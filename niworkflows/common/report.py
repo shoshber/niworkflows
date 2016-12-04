@@ -133,12 +133,12 @@ class RegistrationRC(ReportCapableInterface):
         if self._fixed_image_mask:
             fixed_image_nii = unmask(apply_mask(fixed_image_nii,
                                                 self._fixed_image_mask),
-                                     self._fixed_image_mask)
+                                     fixed_image_nii)
 
         if self._moving_image_mask:
             moving_image_nii = unmask(apply_mask(moving_image_nii,
                                                  self._moving_image_mask),
-                                      self._moving_image_mask)
+                                      moving_image_nii)
 
 
         # Call composer
